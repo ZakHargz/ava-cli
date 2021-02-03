@@ -1,3 +1,4 @@
 click==7.1.2
-PyGithub==1.52
-pyowm==3.0.0
+PyGithub==1.54.1
+boto3=1.17.0
+rich=9.10.0
