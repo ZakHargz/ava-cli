@@ -2,7 +2,7 @@
 
 <p align="center">
    <a href="https://www.linkedin.com/in/zak-hargreaves/">
-      <img alt="Zak Hargreaves" src="https://img.shields.io/badge/-Zak_Hargreaves-fe4d3b?style=flat&logo=Linkedin&logoColor=white" />
+      <img alt="Zak Hargreaves" src="https://img.shields.io/badge/-Zak_Hargreaves-0077B5?style=flat&logo=Linkedin&logoColor=white" />
    </a>
 </p>
 
