@@ -1,24 +1,46 @@
-<h1 align="center">Ava MultiCommand CLI</h1>
+# Ava
 
-<p align="center">
-   <a href="https://www.linkedin.com/in/zak-hargreaves/">
-      <img alt="Zak Hargreaves" src="https://img.shields.io/badge/-Zak_Hargreaves-0077B5?style=flat&logo=Linkedin&logoColor=white" />
-   </a>
-</p>
+Ava is a CLI application to return various items from the AWS Console without the need of logging in.  As long as you have configured your aws-cli to an account; you can run this tool. 
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width=100%/></br>
+## Usage:
 
-## Description
-Some kind of description here.
+```
+/ ❯ ava
+Usage: ava [OPTIONS] COMMAND [ARGS]...
 
-## Highlights
-Add something under here to highlight.
+  Welcome to Ava!
 
-### Exisiting features
-- Item list
+Options:
+  --help  Show this message and exit.
 
-### New features
-- Item list
+Commands:
+  aws  AWS Utils
+```
 
-### Coming soon features
-- Item list
+```
+/ ❯ ava aws
+Usage: ava aws [OPTIONS] COMMAND [ARGS]...
+
+  AWS Utils
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  ec2  Get EC2 things
+  vpc  Return a list of VPCs
+
+```
+
+**Example :**
+
+```
+/ ❯ ava aws ec2 --profile aws-profile
+                     ╷                       ╷               ╷                  ╷             ╷                ╷               ╷                   ╷                     ╷
+ Instance ID         │ VpcID                 │ IP Address    │ Operating System │ Ping Status │ Instance State │ Instance Type │ Availability Zone │ Is Agent Up-To-Date │ Hostname
+╶────────────────────┼───────────────────────┼───────────────┼──────────────────┼─────────────┼────────────────┼───────────────┼───────────────────┼─────────────────────┼───────────────────────────────────────────────────────────────────╴
+ i-0f42c9088419a2c90 │ vpc-02cb1743          │ 10.79.102.132 │ Amazon Linux     │ Online      │ Running        │ t3.medium     │ eu-west-1b        │ False               │ Hostname/NatInstance-V20210217104440
+ i-0f42c9088419a2c90 │ vpc-02cb1743          │ 10.79.102.225 │ Amazon Linux     │ Online      │ Running        │ t3a.large     │ eu-west-1b        │ False               │ Hostname/NatInstance-V20210217104440
+ i-0f42c9088419a2c90 │ vpc-02cb1743          │ 10.79.102.223 │ Amazon Linux     │ Online      │ Running        │ t3a.large     │ eu-west-1b        │ False               │ Hostname/NatInstance-V20210217104440
+ i-0f42c9088419a2c90 │ vpc-02cb1743          │ 10.79.102.157 │ Amazon Linux     │ Online      │ Running        │ t3a.large     │ eu-west-1b        │ False               │ Hostname/NatInstance-V20210217104440
+```
