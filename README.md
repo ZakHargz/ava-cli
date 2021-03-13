@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ZakHargz/ava-cli)
+
 # Ava
 
 Ava is a CLI application to return various items from the AWS Console without the need of logging in.  As long as you have configured your aws-cli to an account; you can run this tool. 
