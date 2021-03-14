@@ -24,4 +24,3 @@ class AwsUtility:
     def collect(self, c, i):
         c[i['InstanceId']] = i
         return c
-
