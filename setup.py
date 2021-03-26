@@ -15,8 +15,8 @@ def read_requirements():
 
 setup(
     name="avacli",
-    version="2.0",
-    packages=find_packages(),
+    version="3.0",
+    packages=['ava'],
     include_package_data=True,
     long_description=README,
     long_description_content_type="text/markdown",

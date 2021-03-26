@@ -2,22 +2,6 @@ import boto3
 import click
 
 
-def reduce(function, iterable, initializer=None):
-    it = iter(iterable)
-    if initializer is None:
-        value = next(it)
-    else:
-        value = initializer
-    for element in it:
-        value = function(value, element)
-    return value
-
-
-def collect(c, i):
-    c[i['InstanceId']] = i
-    return c
-
-
 def display_aws_profile_menu(available_profiles):
     profile_choices = list(map(str, range(1, len(available_profiles) + 1)))
     profile_choice_num = 1
@@ -35,7 +19,7 @@ def display_aws_profile_menu(available_profiles):
 
 
 def get_boto3_session(profile, region):
-    return boto3.session.Session(profile_name=profile, region_name=region)
+    return boto3.Session(profile_name=profile, region_name=region)
 
 
 def select_aws_profile():
