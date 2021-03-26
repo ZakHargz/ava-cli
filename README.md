@@ -11,31 +11,32 @@ Usage: ava [OPTIONS] COMMAND [ARGS]...
   Welcome to Ava!
 
 Options:
-  --help  Show this message and exit.
+  --profile TEXT
+  --region TEXT
+  --help          Show this message and exit.
 
 Commands:
-  aws  AWS Utils
+  ec2  List EC2 instances and SSM status
 ```
 
 ```
-/ ❯ ava aws
-Usage: ava aws [OPTIONS] COMMAND [ARGS]...
+/ ❯ ava ac2
+Which AWS profile do you want to use?
 
-  AWS Utils
+        1 - default
+        2 - profile-2
+        3 - profile-3
+        4 - profile-4
+        5 - profile-5
 
-Options:
-  --help  Show this message and exit.
-
-Commands:
-  ec2  Get EC2 things
-  vpc  Return a list of VPCs
+Profile: 
 
 ```
 
 **Example :**
 
 ```
-/ ❯ ava aws ec2 --profile aws-profile
+/ ❯ ava --profile aws-profile ec2
                      ╷                       ╷               ╷                  ╷             ╷                ╷               ╷                   ╷                     ╷
  Instance ID         │ VpcID                 │ IP Address    │ Operating System │ Ping Status │ Instance State │ Instance Type │ Availability Zone │ Is Agent Up-To-Date │ Hostname
 ╶────────────────────┼───────────────────────┼───────────────┼──────────────────┼─────────────┼────────────────┼───────────────┼───────────────────┼─────────────────────┼───────────────────────────────────────────────────────────────────╴
