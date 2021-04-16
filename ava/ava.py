@@ -7,6 +7,7 @@ from rich import box
 from rich.console import Console
 from rich.table import Table
 from pathlib import Path
+from . import __version__
 
 console = Console()
 BOTO3_SESSION = None
@@ -15,6 +16,7 @@ BOTO3_SESSION = None
 @click.group()
 @click.option('--profile')
 @click.option('--region', default='eu-west-1')
+@click.version_option(version=__version__)
 @click.pass_context
 def cli(ctx, profile, region):
     """
@@ -50,7 +52,7 @@ def return_list_of_instances(ctx):
             output.append(iid.get('VpcId'))
             if next_token is not None:
                 ssm = ssm_client.describe_instance_information(
-                    Filters=[{'Key': 'InstanceIds', 'Values': ['i-02975bc7a520b2434']}], MaxResults=50, NextToken=next_token)
+                    Filters=[{'Key': 'InstanceIds', 'Values': [iid['InstanceId']]}], MaxResults=50, NextToken=next_token)
                 for ssminfo in ssm['InstanceInformationList']:
                     output.append(ssminfo['IPAddress'])
                     output.append(ssminfo['PlatformName'])

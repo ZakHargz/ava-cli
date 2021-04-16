@@ -1,5 +1,6 @@
 import os
 from setuptools import find_packages, setup
+import ava
 
 with open(os.path.join(os.path.dirname(__file__), "README.md")) as readme:
     README = readme.read()
@@ -15,7 +16,7 @@ def read_requirements():
 
 setup(
     name="avacli",
-    version="3.0",
+    version=ava.__version__,
     packages=['ava'],
     include_package_data=True,
     long_description=README,
